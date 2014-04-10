@@ -1,7 +1,7 @@
 package example;
 
-  import java.util.HashMap;
-  import java.util.Map;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Luonanqin on 2/16/14.

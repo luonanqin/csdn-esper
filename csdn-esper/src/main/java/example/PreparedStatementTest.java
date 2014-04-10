@@ -5,7 +5,6 @@ import com.espertech.esper.client.EPPreparedStatement;
 import com.espertech.esper.client.EPServiceProvider;
 import com.espertech.esper.client.EPServiceProviderManager;
 import com.espertech.esper.client.EPStatement;
-
 import example.model.User;
 
 /**

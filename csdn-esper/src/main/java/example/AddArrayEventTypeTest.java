@@ -1,12 +1,12 @@
 package example;
 
-import java.util.Arrays;
-
 import com.espertech.esper.client.ConfigurationOperations;
 import com.espertech.esper.client.EPAdministrator;
 import com.espertech.esper.client.EPServiceProvider;
 import com.espertech.esper.client.EPServiceProviderManager;
 import com.espertech.esper.client.EventType;
+
+import java.util.Arrays;
 
 /**
  * 1.新增数组类EventBean需要输入事件名，包含的属性列表，及列表类型。列表和列表类型一一对应

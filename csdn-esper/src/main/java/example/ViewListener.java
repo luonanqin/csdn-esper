@@ -2,7 +2,6 @@ package example;
 
 import com.espertech.esper.client.EventBean;
 import com.espertech.esper.client.UpdateListener;
-
 import example.model.User;
 
 

@@ -1,10 +1,10 @@
 package example;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.espertech.esper.client.EventBean;
 import com.espertech.esper.client.UpdateListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GroupbyListener implements UpdateListener {
 
