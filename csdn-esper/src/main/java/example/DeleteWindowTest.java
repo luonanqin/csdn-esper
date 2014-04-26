@@ -44,8 +44,8 @@ public class DeleteWindowTest {
 
 		String deleteEvent = DeleteEvent.class.getName();
 
-		String epl1 = "create window DeleteWindow.win:keepall() as delect * from " + deleteEvent;
-		String epl2 = "indert into DeleteWindow delect * from " + deleteEvent;
+		String epl1 = "create window DeleteWindow.win:keepall() as select * from " + deleteEvent;
+		String epl2 = "insert into DeleteWindow select * from " + deleteEvent;
 
 		admin.createEPL(epl1);
 		admin.createEPL(epl2);
@@ -62,8 +62,8 @@ public class DeleteWindowTest {
 		runtime.sendEvent(de2);
 		System.out.println("Send DeleteEvent 2: " + de2);
 
-		String delect = "delect * from DeleteWindow";
-		String delete = "delete from DeleteWindow where size < 2";
+		String delect = "select * from DeleteWindow";
+		String delete = "Delete from DeleteWindow where size < 2";
 
 		System.out.println("\nSelect DeleteWindow!");
 		EPOnDemandQueryResult result1 = epService.getEPRuntime().executeQuery(delect);
