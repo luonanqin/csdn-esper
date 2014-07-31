@@ -12,7 +12,7 @@ import com.espertech.esper.client.EventBean;
 /**
  * Created by Luonanqin on 4/8/14.
  */
-class UpdateEvent implements Serializable{
+class UpdateWindow implements Serializable{
 	private String name;
 	private int size;
 
@@ -43,7 +43,7 @@ public class UpdateWindowTest {
 		EPAdministrator admin = epService.getEPAdministrator();
 		EPRuntime runtime = epService.getEPRuntime();
 
-		String updateEvent = UpdateEvent.class.getName();
+		String updateEvent = UpdateWindow.class.getName();
 
 		String epl1 = "create window UpdateWindow.win:keepall() as select * from " + updateEvent;
 		String epl2 = "insert into UpdateWindow select * from " + updateEvent;
@@ -51,13 +51,13 @@ public class UpdateWindowTest {
 		admin.createEPL(epl1);
 		admin.createEPL(epl2);
 
-		UpdateEvent ue1 = new UpdateEvent();
+		UpdateWindow ue1 = new UpdateWindow();
 		ue1.setName("ue1");
 		ue1.setSize(1);
 		runtime.sendEvent(ue1);
 		System.out.println("Send UpdateEvent 1: " + ue1);
 
-		UpdateEvent ue2 = new UpdateEvent();
+		UpdateWindow ue2 = new UpdateWindow();
 		ue2.setName("ue2");
 		ue2.setSize(2);
 		runtime.sendEvent(ue2);
