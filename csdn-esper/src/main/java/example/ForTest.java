@@ -63,6 +63,8 @@ public class ForTest {
 		String select = "select * from " + forEvent + ".win:length_batch(3)";
 		String for1 = "select * from " + forEvent + ".win:length_batch(3) for grouped_delivery (age)";
 		String for2 = "select * from " + forEvent + ".win:length_batch(3) for discrete_delivery";
+		// not valid! because select clause isn't contain age
+		// select name from ForEvent.win:lenght_batch(3) for grouped_delivery (age)
 
 		ForEvent fe1 = new ForEvent();
 		fe1.setName("luo");
